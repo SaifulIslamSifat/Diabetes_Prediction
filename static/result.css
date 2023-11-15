@@ -1,0 +1,34 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Adjusted line height */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: none; /* Initially hiding all tips/instructions */
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4caf50;
+    text-align: center;
+}
+
+a:hover {
+    color: #45a049;
+    text-align: center;
+}

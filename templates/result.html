@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            /* Adjust background properties */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diabetes Prediction Result</h1>
+    <div id="result">
+        {% if prediction_text == 'The person is not diabetic' %}
+            <h2>The person is not diabetic</h2>
+            <a href="#" class="toggle">Here are some tips for you</a>
+            <ul class="tips" style="display: none;">
+                <li>Eat a balanced diet with plenty of fruits and vegetables.</li>
+                <li>Exercise regularly to maintain a healthy weight.</li>
+                <li>Monitor blood sugar levels regularly as advised by a healthcare professional.</li>
+                <li>Focus on a diet rich in fruits, vegetables, whole grains, lean proteins, and healthy fats.
+                <li>Be mindful of portion sizes to manage calorie intake.</li>
+                <li>Reduce consumption of sugary foods and beverages, as well as refined carbohydrates.</li>
+                <li>Consistency in carb intake can help manage blood sugar levels.</li>
+                    <!-- Add more tips here -->
+            </ul>
+        {% else %}
+            <h2>The person is diabetic</h2>
+            <a href="#" class="toggle">Here are some instructions for you</a>
+            <ul class="instructions" style="display: none;">
+                <li>Instruction 1: Monitor blood sugar regularly</li>
+                <li>Instruction 2: Take prescribed medication</li>
+                <li>Instruction 3: Follow a diabetic-friendly diet</li>
+                <!-- Add more instructions here -->
+            </ul>
+        {% endif %}
+        
+    </div>
+    <a href="/" class="check-again">Check Again</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
