@@ -1,22 +1,14 @@
-/* style.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6; /* Adjusted line height */
-}
 
 h1 {
+    margin-top: 100px;
     text-align: center;
     margin-top: 15px;
 }
 ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    display: none; /* Initially hiding all tips/instructions */
-    text-align: center;
+    margin-top: 100px;
+    padding-left: 100px;
+    display: none; 
+
 }
 
 a {
@@ -32,3 +24,28 @@ a:hover {
     color: #45a049;
     text-align: center;
 }
+.result {
+    text-align: center;
+}
+.mis{
+    display: flex;
+    align-items: center;
+    width:100vw;
+    flex-direction: column;
+}
+.tipss{
+    width:50%;
+    text-align: left;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+  }

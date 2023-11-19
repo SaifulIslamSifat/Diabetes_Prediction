@@ -2,23 +2,48 @@
 <html>
 <head>
     <title>Diabetes Prediction Result</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
     <style>
+        /* Add this CSS */
         body {
-            background-image: url("{{ url_for('static', filename='background.jpg') }}");
-            /* Adjust background properties */
+            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("{{ url_for('static', filename='photo 2.jpeg') }}");
             background-size: cover;
             background-repeat: no-repeat;
+        }
+        #content {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Diabetes Prediction Result</h1>
-    <div id="result">
-        {% if prediction_text == 'The person is not diabetic' %}
-            <h2>The person is not diabetic</h2>
-            <a href="#" class="toggle">Here are some tips for you</a>
-            <ul class="tips" style="display: none;">
+    <div id="result" class="mis">
+        {% if prediction_text == 'The person is diabetic' %}
+            <h2>Your Diabeties status is : Positive</h2>
+            <a href="#" class="toggle">Here are some Tips for you</a>
+             <ul class="tips" style="display: none;">
+                <li>Monitor blood sugar regularly</li>
+                <li>Take prescribed medication</li>
+                <li>I Follow a diabetic-friendly diet</li>
+                <li>Monitor and control carbohydrate intake, as they directly impact blood sugar levels.</li>
+                <li>Avoid sugary drinks, candies, and processed foods high in sugar.</li>
+                <li>Keep skin clean and moisturized to prevent dryness and potential skin issues.</li>
+                <li>Know the signs of high and low blood sugar and how to respond to them.</li>
+
+            </ul>
+            
+        {% else %}
+            <h2>Your Diabeties status is : Negative</h2>
+                <a href="#" class="toggle">Here are some Tips for you</a>
+            <ul class="instructions" style="display: none;">
                 <li>Eat a balanced diet with plenty of fruits and vegetables.</li>
                 <li>Exercise regularly to maintain a healthy weight.</li>
                 <li>Monitor blood sugar levels regularly as advised by a healthcare professional.</li>
@@ -26,21 +51,17 @@
                 <li>Be mindful of portion sizes to manage calorie intake.</li>
                 <li>Reduce consumption of sugary foods and beverages, as well as refined carbohydrates.</li>
                 <li>Consistency in carb intake can help manage blood sugar levels.</li>
-                    <!-- Add more tips here -->
-            </ul>
-        {% else %}
-            <h2>The person is diabetic</h2>
-            <a href="#" class="toggle">Here are some instructions for you</a>
-            <ul class="instructions" style="display: none;">
-                <li>Instruction 1: Monitor blood sugar regularly</li>
-                <li>Instruction 2: Take prescribed medication</li>
-                <li>Instruction 3: Follow a diabetic-friendly diet</li>
-                <!-- Add more instructions here -->
             </ul>
         {% endif %}
-        
+   
     </div>
-    <a href="/" class="check-again">Check Again</a>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="/" style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #fff; background-color: #4caf50; border-radius: 5px;"><b>Check Again</b></a>
+    </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <footer>
+        <h4>Developed by: Saiful Islam Sifat and Md. Sabbir Alam<h4>
+    </footer>
 </body>
 </html>

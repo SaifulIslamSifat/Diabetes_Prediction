@@ -1,4 +1,4 @@
-/* style.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -9,11 +9,13 @@ body {
 h1 {
     text-align: center;
     margin-top: 15px;
+    margin-left: 670px;
 }
 
 form {
     max-width: 300px;
-    margin: 0 auto;
+    margin-left: 950px;
+    
     background: #fff;
     padding: 5px;
     border-radius: 3px;
@@ -23,20 +25,20 @@ form {
 label {
     font-weight: bold;
     display: block;
-    margin-bottom: 1px; /* Adjusted margin-bottom */
+    margin-bottom: 1px; 
 }
 
 input[type="text"] {
     width: calc(100% - 12px);
     padding: 4px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(152, 149, 149);
     border-radius: 4px;
 }
 
 input[type="submit"] {
-    display: block; /* Display as block to center */
-    margin: 0 auto; /* Center the button */
+    display: block; 
+    margin: 0 auto; 
     background: #4caf50;
     color: #fff;
     border: none;
@@ -59,3 +61,4 @@ footer {
     font-family: Arial, sans-serif;
     font-size: 12px;
   }
+
